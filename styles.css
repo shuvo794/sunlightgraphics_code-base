@@ -1274,90 +1274,129 @@ img {
 }
 
 /* ==========================================================================
-   READY TO GET STARTED CTA BANNER SECTION (EXACT REFERENCE MATCH)
+   CTA SECTION (EXACT SPECIFICATION MATCH)
    ========================================================================== */
-.cta-banner-section {
-  position: relative;
-  background-color: #071330;
-  padding: 4.25rem 0;
-  overflow: hidden;
-}
-
-.cta-banner-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.cta-section {
   width: 100%;
-  height: 100%;
-  background-image: url('assets/sacramento_bridge_skyline.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: invert(1) hue-rotate(180deg) brightness(0.65) opacity(0.35);
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.cta-banner-container {
+  height: 108px;
+  background-color: #06247F;
+  overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
-.cta-banner-content {
+.cta-container {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-width, 1200px);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
 }
 
-.cta-banner-title {
-  font-family: var(--font-poppins);
-  font-size: 2.25rem;
-  font-weight: 800;
+.cta-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 28px;
+}
+
+.cta-content h2 {
+  margin: 0 0 3px 0;
   color: #FFFFFF;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.5px;
-}
-
-.cta-banner-subtitle {
   font-family: var(--font-poppins);
-  font-size: 1rem;
-  color: #FFFFFF;
-  font-weight: 400;
-  line-height: 1.4;
-  opacity: 0.95;
-}
-
-.cta-banner-btn {
-  display: inline-block;
-  background-color: #E31B23;
-  color: #FFFFFF !important;
-  font-family: var(--font-poppins);
-  font-size: 0.92rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  padding: 1.1rem 2.8rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 20px rgba(227, 27, 35, 0.5);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
   white-space: nowrap;
 }
 
-.cta-banner-btn:hover {
-  background-color: #C41219;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(227, 27, 35, 0.7);
+.cta-content p {
+  margin: 0;
+  color: #FFFFFF;
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .cta-banner-content {
+.cta-action {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 258px;
+  height: 61px;
+  background: #ED1018;
+  color: #FFFFFF !important;
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgba(237, 16, 24, 0.35);
+}
+
+.cta-button:hover {
+  background: #C40C13;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(237, 16, 24, 0.55);
+}
+
+.cta-skyline {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  height: 100%;
+  background-image: url('assets/sacramento_skyline_footer_bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .cta-section {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .cta-container {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
+  }
+  .cta-content {
+    margin-left: 0;
+  }
+  .cta-content h2 {
+    font-size: 26px;
+    white-space: normal;
+  }
+  .cta-content p {
+    white-space: normal;
+  }
+  .cta-action {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+  .cta-skyline {
+    opacity: 0.35;
+    width: 60%;
   }
 }
 
