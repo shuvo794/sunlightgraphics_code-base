@@ -819,9 +819,9 @@ img {
 .industry-description {
   font-family: var(--font-poppins);
   font-size: 0.82rem;
-  color: #475569;
+  color: #0F2B7B;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .industries-arrow-btn {
@@ -881,10 +881,10 @@ img {
   font-family: var(--font-poppins);
   font-size: 3.1rem;
   font-weight: 800;
-  color: #0A1C4D;
+  color: #0F2B7B;
   line-height: 1.05;
   letter-spacing: -0.8px;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .feature-main-title .red-mark {
@@ -898,7 +898,7 @@ img {
 
 .feature-vertical-divider {
   width: 1px;
-  height: 145px;
+  height: 135px;
   background-color: #E2E8F0;
   flex-shrink: 0;
 }
@@ -909,10 +909,10 @@ img {
 
 .feature-text-content p {
   font-family: var(--font-poppins);
-  font-size: 1.02rem;
-  color: #475569;
+  font-size: 0.96rem;
+  color: #0F2B7B;
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* ==========================================================================
