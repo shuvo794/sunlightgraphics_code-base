@@ -7,7 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  /* Exact Brand Palette from Screenshot */
+  /* Standard CSS Variables */
+  --primary-blue: #0A1C4D;
+  --secondary-blue: #223983;
+  --accent-red: #E31B23;
+  --dark-text: #0A1C4D;
+  --light-border: #EAEFF6;
+  --light-blue-bg: #F8FAFD;
+  --white: #FFFFFF;
+  --container-width: 1200px;
+
+  /* Brand Palette Variables */
   --navy-dark: #0A1C4D;
   --navy-bar: #0D235F;
   --blue-brand: #223983;
@@ -1264,6 +1274,94 @@ img {
 }
 
 /* ==========================================================================
+   READY TO GET STARTED CTA BANNER SECTION (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.cta-banner-section {
+  position: relative;
+  background-color: #071330;
+  padding: 4.25rem 0;
+  overflow: hidden;
+}
+
+.cta-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/sacramento_bridge_skyline.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(1) hue-rotate(180deg) brightness(0.65) opacity(0.35);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.cta-banner-container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.cta-banner-title {
+  font-family: var(--font-poppins);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.cta-banner-subtitle {
+  font-family: var(--font-poppins);
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.cta-banner-btn {
+  display: inline-block;
+  background-color: #E31B23;
+  color: #FFFFFF !important;
+  font-family: var(--font-poppins);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 1.1rem 2.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(227, 27, 35, 0.5);
+  white-space: nowrap;
+}
+
+.cta-banner-btn:hover {
+  background-color: #C41219;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(227, 27, 35, 0.7);
+}
+
+@media (max-width: 768px) {
+  .cta-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
    MODAL DIALOG STYLES
    ========================================================================== */
 .modal-overlay {
@@ -1398,5 +1496,162 @@ img {
   }
   .services-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   FOOTER STYLES (MULTI-COLUMN RESPONSIVE FOOTER)
+   ========================================================================== */
+.footer-section {
+  background-color: #0A1C4D;
+  color: #FFFFFF;
+  padding: 4.5rem 0 2rem 0;
+  border-top: 4px solid #E31B23;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.footer-about {
+  font-size: 0.88rem;
+  color: #C2D0F0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.social-icon:hover {
+  background-color: #E31B23;
+  transform: translateY(-3px);
+}
+
+.footer-col-title {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.footer-links-list, .footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-links-list a {
+  color: #C2D0F0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: #FFFFFF;
+  padding-left: 4px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #C2D0F0;
+  font-size: 0.88rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
+}
+
+.footer-contact-list svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #E31B23;
+}
+
+.footer-contact-list a {
+  color: #C2D0F0;
+  text-decoration: none;
+}
+
+.footer-contact-list a:hover {
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #A0AEC0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: #A0AEC0;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }
