@@ -610,7 +610,7 @@ img {
 .section-main-title {
   font-size: 2.15rem;
   font-weight: 800;
-  color: #0A1C4D;
+  color: #0F2B7B;
   letter-spacing: -0.4px;
 }
 
@@ -659,7 +659,7 @@ img {
 .service-title {
   font-size: 1.02rem;
   font-weight: 800;
-  color: #0A1C4D;
+  color: #0F2B7B;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
   letter-spacing: 0.3px;
@@ -668,17 +668,18 @@ img {
 
 .service-description {
   font-size: 0.85rem;
-  color: #556885;
+  color: #0F2B7B;
   margin-bottom: 1.25rem;
   line-height: 1.45;
   flex-grow: 1;
   max-width: 240px;
+  font-weight: 500;
 }
 
 .service-link {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  color: #0A1C4D;
+  color: #0F2B7B;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -688,7 +689,7 @@ img {
 }
 
 .service-card:hover .service-link {
-  color: #223983;
+  color: #E31B23;
 }
 
 .service-link .red-arrow {
