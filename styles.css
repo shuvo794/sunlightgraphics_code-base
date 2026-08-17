@@ -412,82 +412,171 @@ img {
 }
 
 /* ==========================================================================
-   TRUSTED BY SECTION
+   TRUSTED BY SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .trusted-by-section {
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 2rem 0;
   background-color: #FFFFFF;
   text-align: center;
-  border-bottom: 1px solid var(--border-light);
 }
 
 .trusted-by-title {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: 800;
-  color: var(--blue-brand);
-  margin-bottom: 2.25rem;
+  color: #0A1C4D;
+  line-height: 1.35;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.3px;
 }
 
-.logos-container {
+.trusted-logos-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.2);
+}
+
+.logos-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
   gap: 2.5rem;
   flex-wrap: wrap;
 }
 
-.carousel-arrow {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 2px solid #E2E8F0;
+.brand-logo-clean {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--blue-brand);
-  cursor: pointer;
-  transition: all 0.2s ease;
+  gap: 0.4rem;
+  font-family: var(--font-poppins);
+  user-select: none;
+  transition: transform 0.25s ease;
 }
 
-.carousel-arrow:hover {
-  border-color: var(--red-brand);
-  background: var(--red-brand);
-  color: #FFFFFF;
+.brand-logo-clean:hover {
+  transform: translateY(-2px);
 }
 
-.brand-logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.75rem;
-  border-radius: 8px;
-  background: var(--bg-subtle);
-  border: 1px solid #EEF2F6;
+/* Verizon Logo */
+.logo-verizon-text {
+  font-size: 1.45rem;
   font-weight: 800;
-  font-size: 1.3rem;
+  color: #111111;
   letter-spacing: -0.5px;
-  transition: all 0.3s ease;
 }
 
-.brand-logo-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+.logo-verizon-check {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #CD040B;
 }
 
-.brand-verizon { color: #CD040B; }
-.brand-tmobile { color: #E20074; }
-.brand-nyc { color: #0077C8; }
-.brand-barclays { color: #00AEEF; }
-.brand-mountsinai { color: #2D2926; }
-.brand-mountsinai span { color: #D8005A; }
+/* T-Mobile Logo */
+.logo-tmobile {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #E20074;
+  letter-spacing: -0.5px;
+}
+
+.logo-tmobile .t-dash {
+  color: #E20074;
+  margin: 0 1px;
+}
+
+/* NYC Health Logo */
+.nyc-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.95;
+}
+
+.nyc-letters {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #004B87;
+  letter-spacing: -1px;
+}
+
+.nyc-health-sub {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #0077C8;
+  letter-spacing: 0.5px;
+}
+
+/* Barclays Logo */
+.barclays-eagle-svg {
+  width: 28px;
+  height: 24px;
+}
+
+.barclays-text {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #00AEEF;
+  letter-spacing: 1px;
+}
+
+/* Mount Sinai Logo */
+.mountsinai-svg {
+  width: 32px;
+  height: 24px;
+}
+
+.mount-text-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1;
+}
+
+.mount-top {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2D2926;
+  font-family: serif;
+}
+
+.mount-bot {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #2D2926;
+  font-family: serif;
+}
+
+.section-divider-line {
+  height: 1px;
+  background-color: #EEF2F6;
+  width: 100%;
+  margin-top: 1rem;
+}
 
 /* ==========================================================================
-   SERVICES GRID SECTION
+   SERVICES GRID SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .services-section {
-  padding: 5rem 0;
-  background-color: var(--bg-subtle);
+  padding: 4.5rem 0 5rem 0;
+  background-color: #FFFFFF;
 }
 
 .section-header {
@@ -496,139 +585,183 @@ img {
 }
 
 .section-tagline {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--red-brand);
+  letter-spacing: 1.5px;
+  color: #E31B23;
   margin-bottom: 0.5rem;
   display: block;
 }
 
 .section-main-title {
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: var(--blue-brand);
-  letter-spacing: -0.5px;
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  letter-spacing: -0.4px;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.75rem;
+  gap: 2.5rem 2rem;
 }
 
 .service-card {
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding: 2.25rem 1.5rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0.5rem;
   text-align: center;
-  border: 1px solid #EEF2F6;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  transition: all 0.35s ease;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(10, 28, 77, 0.1);
-  border-color: rgba(34, 57, 131, 0.2);
+  transform: translateY(-4px);
 }
 
 .service-icon-box {
-  width: 68px;
-  height: 68px;
-  border-radius: 12px;
-  background: var(--bg-subtle);
-  border: 1px solid rgba(34, 57, 131, 0.1);
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  color: var(--blue-brand);
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .service-card:hover .service-icon-box {
-  background: var(--red-brand);
-  color: #FFFFFF;
-  border-color: var(--red-brand);
+  transform: scale(1.08);
+}
+
+.service-dual-svg {
+  width: 58px;
+  height: 58px;
 }
 
 .service-title {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 800;
-  color: var(--blue-brand);
+  color: #0A1C4D;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.3px;
+  line-height: 1.25;
 }
 
 .service-description {
-  font-size: 0.875rem;
-  color: var(--text-body);
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #556885;
+  margin-bottom: 1.25rem;
   line-height: 1.45;
   flex-grow: 1;
+  max-width: 240px;
 }
 
 .service-link {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  color: var(--blue-brand);
+  color: #0A1C4D;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: color 0.2s ease;
 }
 
 .service-card:hover .service-link {
-  color: var(--red-brand);
+  color: #223983;
+}
+
+.service-link .red-arrow {
+  color: #E31B23;
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-link .red-arrow {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
-   LET'S GET PRINTING FEATURE BANNER
+   LET'S GET PRINTING FEATURE BANNER (EXACT MATCH TO REFERENCE DESIGN)
    ========================================================================== */
 .feature-banner-section {
-  padding: 4.5rem 0;
+  padding: 3.5rem 0;
   background-color: #FFFFFF;
+  border-top: 1px solid #EEF2F6;
+  border-bottom: 1px solid #EEF2F6;
 }
 
 .feature-banner-card {
-  background: var(--bg-subtle);
-  border-radius: 12px;
-  padding: 3.5rem;
-  border: 1px solid #E2E8F0;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 3rem;
+  display: flex;
   align-items: center;
+  gap: 3.5rem;
+  padding: 0.5rem 0;
 }
 
 .feature-headline-box {
-  border-left: 6px solid var(--red-brand);
-  padding-left: 1.5rem;
+  display: flex;
+  align-items: stretch;
+  gap: 1.25rem;
+  flex-shrink: 0;
 }
 
-.feature-headline-box h2 {
-  font-size: 2.85rem;
-  font-weight: 900;
-  color: var(--blue-brand);
-  line-height: 1.1;
+.feature-red-bar {
+  width: 5px;
+  background-color: #E31B23;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
-.feature-headline-box h2 span {
-  color: var(--red-brand);
+.feature-headline-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-main-title {
+  font-family: var(--font-poppins);
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  line-height: 1.05;
+  letter-spacing: -0.8px;
+  margin-bottom: 0.85rem;
+}
+
+.feature-main-title .red-mark {
+  color: #E31B23;
+}
+
+.feature-dots-svg {
+  margin-top: 0.15rem;
+  display: block;
+}
+
+.feature-vertical-divider {
+  width: 1px;
+  height: 145px;
+  background-color: #E2E8F0;
+  flex-shrink: 0;
+}
+
+.feature-text-content {
+  flex-grow: 1;
 }
 
 .feature-text-content p {
-  font-size: 1.05rem;
-  color: var(--text-body);
-  line-height: 1.65;
+  font-family: var(--font-poppins);
+  font-size: 1.02rem;
+  color: #475569;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 /* ==========================================================================
