@@ -1139,6 +1139,131 @@ img {
 }
 
 /* ==========================================================================
+   OUR PROCESS SECTION (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.process-section {
+  padding: 4.5rem 0 5rem 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid #EEF2F6;
+  border-bottom: 1px solid #EEF2F6;
+}
+
+.process-tagline {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #E31B23;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.process-main-title {
+  font-family: var(--font-poppins);
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  letter-spacing: -0.4px;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.process-steps-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.process-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 220px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon-box {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.process-step-item:hover .step-icon-box {
+  transform: scale(1.1);
+}
+
+.process-icon-svg {
+  width: 76px;
+  height: 76px;
+}
+
+.step-number-badge {
+  width: 28px;
+  height: 28px;
+  background-color: #E31B23;
+  color: #FFFFFF;
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 8px rgba(227, 27, 35, 0.3);
+}
+
+.step-title {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F2B7B;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.step-description {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.process-connector {
+  flex-grow: 1;
+  height: 2px;
+  border-top: 2.5px dotted #0F2B7B;
+  margin-top: 38px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+@media (max-width: 992px) {
+  .process-steps-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .process-connector {
+    display: none;
+  }
+  .process-step-item {
+    max-width: 320px;
+  }
+}
+
+/* ==========================================================================
    MODAL DIALOG STYLES
    ========================================================================== */
 .modal-overlay {
