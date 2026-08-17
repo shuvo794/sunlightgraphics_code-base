@@ -1010,6 +1010,135 @@ img {
 }
 
 /* ==========================================================================
+   GOOGLE REVIEWS & TESTIMONIALS SECTION (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.reviews-section {
+  padding: 4.5rem 0;
+  background-color: #FFFFFF;
+}
+
+.reviews-tagline {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #E31B23;
+  margin-bottom: 2.5rem;
+  display: block;
+  text-align: center;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.review-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEFF6;
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(10, 28, 77, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px rgba(10, 28, 77, 0.08);
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.google-logo-svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.2rem;
+  color: #FFB800;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.review-quote {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  color: #0A1C4D;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-family: var(--font-poppins);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  margin-bottom: 0.15rem;
+}
+
+.author-title {
+  font-size: 0.82rem;
+  color: #556885;
+  font-weight: 400;
+}
+
+.reviews-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.summary-score {
+  font-family: var(--font-poppins);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0A1C4D;
+}
+
+.summary-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: #FFB800;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.summary-text {
+  font-family: var(--font-poppins);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0A1C4D;
+}
+
+@media (max-width: 992px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    MODAL DIALOG STYLES
    ========================================================================== */
 .modal-overlay {
