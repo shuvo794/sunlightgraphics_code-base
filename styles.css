@@ -1105,11 +1105,11 @@ img {
 
 .review-quote {
   font-family: var(--font-poppins);
-  font-size: 0.95rem;
-  color: #0A1C4D;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  color: #0F2B7B;
+  line-height: 1.55;
   font-weight: 500;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
@@ -1120,16 +1120,18 @@ img {
 
 .author-name {
   font-family: var(--font-poppins);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  color: #0A1C4D;
-  margin-bottom: 0.15rem;
+  color: #0F2B7B;
+  margin-bottom: 0.2rem;
 }
 
 .author-title {
+  font-family: var(--font-poppins);
   font-size: 0.82rem;
-  color: #556885;
-  font-weight: 400;
+  color: #0F2B7B;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .reviews-summary-bar {
