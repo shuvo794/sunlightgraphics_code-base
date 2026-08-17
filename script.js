@@ -98,4 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Industries Carousel Navigation Controls
+  const industriesTrack = document.getElementById('industriesTrack');
+  const industriesPrevBtn = document.getElementById('industriesPrevBtn');
+  const industriesNextBtn = document.getElementById('industriesNextBtn');
+
+  if (industriesTrack && industriesPrevBtn && industriesNextBtn) {
+    industriesPrevBtn.addEventListener('click', () => {
+      industriesTrack.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+    industriesNextBtn.addEventListener('click', () => {
+      industriesTrack.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+  }
 });

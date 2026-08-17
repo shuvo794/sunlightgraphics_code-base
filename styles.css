@@ -691,6 +691,129 @@ img {
 }
 
 /* ==========================================================================
+   INDUSTRIES WE SERVE SECTION (EXACT MATCH TO REFERENCE DESIGN)
+   ========================================================================== */
+.industries-section {
+  padding: 4.5rem 0 5rem 0;
+  background-color: #FFFFFF;
+}
+
+.industries-tagline {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #E31B23;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.industries-main-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  letter-spacing: -0.4px;
+  margin-bottom: 3rem;
+}
+
+.industries-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.industries-carousel-track {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem 0.25rem 1rem 0.25rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.industries-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.industry-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEFF6;
+  border-radius: 14px;
+  padding: 2.25rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  scroll-snap-align: start;
+  min-height: 290px;
+  box-shadow: 0 4px 15px rgba(10, 28, 77, 0.03);
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px rgba(10, 28, 77, 0.08);
+}
+
+.industry-icon-box {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease;
+}
+
+.industry-card:hover .industry-icon-box {
+  transform: scale(1.08);
+}
+
+.industry-card-svg {
+  width: 52px;
+  height: 52px;
+}
+
+.industry-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
+
+.industry-description {
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.industries-arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  z-index: 5;
+}
+
+.industries-arrow-btn:hover {
+  transform: scale(1.25);
+}
+
+/* ==========================================================================
    LET'S GET PRINTING FEATURE BANNER (EXACT MATCH TO REFERENCE DESIGN)
    ========================================================================== */
 .feature-banner-section {
@@ -762,6 +885,128 @@ img {
   color: #475569;
   line-height: 1.7;
   font-weight: 400;
+}
+
+/* ==========================================================================
+   TRUSTED PRINTING PARTNER SECTION (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.trusted-partner-section {
+  padding: 4.5rem 0;
+  background-color: #FFFFFF;
+}
+
+.partner-banner-card {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(10, 28, 77, 0.05);
+}
+
+.partner-navy-box {
+  background-color: #0A1C4D;
+  color: #FFFFFF;
+  padding: 3.5rem 3rem;
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.partner-navy-title {
+  font-family: var(--font-poppins);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.25rem;
+}
+
+.partner-navy-title .red-mark {
+  color: #E31B23;
+}
+
+.partner-navy-desc {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  color: #C2D0F0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.partner-features-grid {
+  background-color: #FFFFFF;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.partner-feature-item {
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.partner-feature-item.border-bottom {
+  border-bottom: 1px solid #EEF2F6;
+}
+
+.partner-feature-item.border-right {
+  border-right: 1px solid #EEF2F6;
+}
+
+.partner-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-feature-svg {
+  width: 44px;
+  height: 44px;
+  stroke: #223983;
+}
+
+.partner-feature-title {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0A1C4D;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
+
+.partner-feature-desc {
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .partner-banner-card {
+    flex-direction: column;
+  }
+  .partner-navy-box {
+    width: 100%;
+    padding: 2.5rem 2rem;
+  }
+  .partner-features-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .partner-feature-item.border-right {
+    border-right: none;
+  }
 }
 
 /* ==========================================================================
