@@ -112,4 +112,32 @@ document.addEventListener('DOMContentLoaded', () => {
       industriesTrack.scrollBy({ left: 260, behavior: 'smooth' });
     });
   }
+
+  // Mobile Navigation Toggle
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const closeIcon = document.querySelector('.close-icon');
+
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('mobile-active');
+      const isActive = navMenu.classList.contains('mobile-active');
+      if (hamburgerIcon && closeIcon) {
+        hamburgerIcon.style.display = isActive ? 'none' : 'block';
+        closeIcon.style.display = isActive ? 'block' : 'none';
+      }
+    });
+
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-active');
+        if (hamburgerIcon && closeIcon) {
+          hamburgerIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      });
+    });
+  }
 });
