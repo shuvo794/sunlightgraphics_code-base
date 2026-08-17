@@ -1001,14 +1001,14 @@ img {
 .partner-feature-svg {
   width: 44px;
   height: 44px;
-  stroke: #223983;
+  stroke: #0F2B7B;
 }
 
 .partner-feature-title {
   font-family: var(--font-poppins);
   font-size: 0.95rem;
   font-weight: 800;
-  color: #0A1C4D;
+  color: #0F2B7B;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.35rem;
@@ -1016,10 +1016,11 @@ img {
 }
 
 .partner-feature-desc {
+  font-family: var(--font-poppins);
   font-size: 0.85rem;
-  color: #64748B;
+  color: #0F2B7B;
   line-height: 1.45;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
