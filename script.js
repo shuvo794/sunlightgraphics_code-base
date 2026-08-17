@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dropzone.addEventListener('dragover', (e) => {
       e.preventDefault();
-      dropzone.style.borderColor = '#E31B23';
-      dropzone.style.background = 'rgba(227, 27, 35, 0.05)';
+      dropzone.style.borderColor = '#C4161C';
+      dropzone.style.background = 'rgba(196, 22, 28, 0.05)';
     });
 
     ['dragleave', 'dragend'].forEach(type => {

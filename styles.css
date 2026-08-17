@@ -1,6 +1,6 @@
 /* ==========================================================================
    Sunlight Graphics - Exact Design Match Stylesheet
-   Primary Colors: Dark Navy (#0D235F, #0A1C4D), Sunlight Blue (#223983), Brand Red (#E31B23)
+   Primary Colors: Dark Navy (#0D235F, #0A1C4D), Sunlight Blue (#223983), Brand Red (#C4161C)
    Typography: Poppins (Google Fonts)
    ========================================================================== */
 
@@ -10,7 +10,7 @@
   /* Standard CSS Variables */
   --primary-blue: #0A1C4D;
   --secondary-blue: #223983;
-  --accent-red: #E31B23;
+  --accent-red: #C4161C;
   --dark-text: #0A1C4D;
   --light-border: #EAEFF6;
   --light-blue-bg: #F8FAFD;
@@ -23,8 +23,8 @@
   --blue-brand: #223983;
   --blue-text: #0E245D;
   
-  --red-brand: #E31B23;
-  --red-hover: #C5131A;
+  --red-brand: #C4161C;
+  --red-hover: #A31015;
   
   --bg-main: #FFFFFF;
   --bg-subtle: #F8FAFD;
@@ -110,7 +110,7 @@ img {
 .btn-primary-red:hover {
   background-color: var(--red-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(227, 27, 35, 0.35);
+  box-shadow: 0 4px 12px rgba(196, 22, 28, 0.35);
 }
 
 .btn-outline-blue {
