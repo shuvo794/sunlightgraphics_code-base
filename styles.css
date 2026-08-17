@@ -1344,14 +1344,14 @@ img {
   text-transform: uppercase;
   border: none;
   border-radius: 0;
-  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 15px rgba(237, 16, 24, 0.35);
+  box-shadow: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .cta-button:hover {
   background: #C40C13;
   transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(237, 16, 24, 0.55);
+  box-shadow: none;
 }
 
 .cta-skyline {
@@ -1545,7 +1545,6 @@ img {
   background-color: #0A1C4D;
   color: #FFFFFF;
   padding: 4.5rem 0 2rem 0;
-  border-top: 4px solid #E31B23;
 }
 
 .footer-grid {
