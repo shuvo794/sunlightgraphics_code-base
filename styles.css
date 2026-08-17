@@ -1323,9 +1323,11 @@ img {
 }
 
 .cta-action {
-  position: relative;
+  position: absolute;
   z-index: 3;
-  margin-right: 32%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cta-button {
@@ -1351,7 +1353,7 @@ img {
 
 .cta-button:hover {
   background-color: #C41219;
-  transform: translateY(-1px);
+  transform: scale(1.03);
   box-shadow: none;
 }
 
@@ -1359,7 +1361,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 38%;
+  width: 30%;
   height: 100%;
   background-image: url('assets/sacramento_skyline_footer_bg.png');
   background-repeat: no-repeat;
