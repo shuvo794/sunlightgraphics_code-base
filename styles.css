@@ -1439,11 +1439,12 @@ img {
   right: 0;
   bottom: 0;
   background: rgba(10, 28, 77, 0.75);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
+  backdrop-filter: blur(6px);
+  z-index: 3000;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -1457,77 +1458,154 @@ img {
 .modal-card {
   background: #FFFFFF;
   border-radius: 16px;
-  width: 90%;
-  max-width: 560px;
-  padding: 2.5rem;
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 2.25rem 2rem;
   position: relative;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  box-shadow: 0 25px 60px rgba(10, 28, 77, 0.35);
+  border: 1px solid rgba(15, 43, 123, 0.08);
 }
 
 .modal-overlay.active .modal-card {
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .modal-close-btn {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #F1F5F9;
   border: none;
-  font-size: 1.5rem;
-  color: var(--text-muted);
+  font-size: 1.25rem;
+  color: #0F2B7B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: #E31B23;
+  color: #FFFFFF;
+  transform: rotate(90deg);
+}
+
+.modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(227, 27, 35, 0.08);
+  color: #E31B23;
+  font-family: var(--font-poppins);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
 .modal-title {
-  font-size: 1.6rem;
+  font-family: var(--font-poppins);
+  font-size: 1.65rem;
   font-weight: 800;
-  color: var(--navy-dark);
-  margin-bottom: 0.5rem;
+  color: #0F2B7B;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.3px;
 }
 
 .modal-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-body);
+  font-family: var(--font-poppins);
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
   margin-bottom: 1.5rem;
 }
 
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
 }
 
 .form-label {
   display: block;
-  font-size: 0.85rem;
+  font-family: var(--font-poppins);
+  font-size: 0.82rem;
   font-weight: 700;
-  color: var(--navy-dark);
+  color: #0F2B7B;
   margin-bottom: 0.4rem;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #CBD5E1;
+  border: 1.5px solid #CBD5E1;
   border-radius: 8px;
   font-family: var(--font-poppins);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  color: #0A1C4D;
+  background-color: #FFFFFF;
+  transition: all 0.2s ease;
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--blue-brand);
+  border-color: #0F2B7B;
+  box-shadow: 0 0 0 3px rgba(15, 43, 123, 0.12);
+}
+
+.btn-submit-modal {
+  width: 100%;
+  height: 50px;
+  background-color: #E31B23;
+  color: #FFFFFF;
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  font-size: 0.92rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(227, 27, 35, 0.3);
+  margin-top: 0.5rem;
+}
+
+.btn-submit-modal:hover {
+  background-color: #C41219;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(227, 27, 35, 0.4);
 }
 
 /* Upload Dropzone */
 .dropzone {
-  border: 2px dashed var(--blue-brand);
+  border: 2px dashed #0F2B7B;
   border-radius: 12px;
   padding: 2.5rem 1.5rem;
   text-align: center;
-  background: var(--bg-subtle);
+  background: #F8FAFD;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* Responsive Breakpoints */

@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=13" />
+    <link rel="stylesheet" href="styles.css?v=14" />
   </head>
   <body>
     <!-- Top Announcement Bar -->
@@ -1901,65 +1901,79 @@
         <button class="modal-close-btn" aria-label="Close modal">
           &times;
         </button>
+
+        <div class="modal-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Fast Response Within 2 Hours
+        </div>
+
         <h3 class="modal-title">Request a Free Quote</h3>
         <p class="modal-subtitle">
-          Tell us about your project requirements and we will send a custom
-          quote within 2 hours.
+          Tell us about your project requirements and our printing experts will send a custom quote.
         </p>
 
         <form id="quoteForm">
-          <div class="form-group">
-            <label class="form-label" for="fullName">Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              class="form-input"
-              placeholder="e.g. Sarah Jenkins"
-              required
-            />
+          <div class="form-grid-2col">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name *</label>
+              <input
+                type="text"
+                id="fullName"
+                class="form-input"
+                placeholder="e.g. Sarah Jenkins"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phoneNum">Phone Number *</label>
+              <input
+                type="tel"
+                id="phoneNum"
+                class="form-input"
+                placeholder="(916) 421-1200"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-grid-2col">
+            <div class="form-group">
+              <label class="form-label" for="companyEmail">Business Email *</label>
+              <input
+                type="email"
+                id="companyEmail"
+                class="form-input"
+                placeholder="sarah@company.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="serviceSelect">Service Required *</label>
+              <select id="serviceSelect" class="form-select">
+                <option value="business">Business Printing (Cards, Letterheads)</option>
+                <option value="wide">Wide Format &amp; Banners</option>
+                <option value="marketing">Marketing Flyers &amp; Brochures</option>
+                <option value="apparel">Custom Apparel &amp; Uniforms</option>
+                <option value="signs">Indoor &amp; Outdoor Signage</option>
+                <option value="other">Other / Custom Print</option>
+              </select>
+            </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="companyEmail">Business Email</label>
-            <input
-              type="email"
-              id="companyEmail"
-              class="form-input"
-              placeholder="sarah@company.com"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="serviceSelect"
-              >Service Required</label
-            >
-            <select id="serviceSelect" class="form-select">
-              <option value="business">
-                Business Printing (Cards, Letterheads)
-              </option>
-              <option value="wide">Wide Format &amp; Banners</option>
-              <option value="marketing">
-                Marketing Flyers &amp; Brochures
-              </option>
-              <option value="apparel">Custom Apparel &amp; Uniforms</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="projectDetails"
-              >Project Details &amp; Quantity</label
-            >
+            <label class="form-label" for="projectDetails">Project Details &amp; Quantity</label>
             <textarea
               id="projectDetails"
               class="form-textarea"
               rows="3"
-              placeholder="Describe size, paper stock, quantity..."
+              placeholder="Describe size, paper stock, quantity, turnaround date..."
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary-red" style="width: 100%">
-            SUBMIT QUOTE REQUEST
+          <button type="submit" class="btn-submit-modal">
+            SUBMIT QUOTE REQUEST &rarr;
           </button>
         </form>
       </div>
