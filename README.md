@@ -46,23 +46,6 @@ Built strictly according to the **Official Sunlight Graphics Developer Blueprint
 | **Sunlight Graphics Red** | `#C4161C` | `rgb(196, 22, 28)` | Primary CTAs, Badges, Highlights |
 | **Dark Navy** | `#0A1C4D` | `rgb(10, 28, 77)` | Top Bar, Cards, Deep Contrast Sections |
 | **Subtle Light Background** | `#F8FAFD` | `rgb(248, 250, 253)` | Section Backgrounds, Card Fills |
-| **Typography** | `Poppins` | Sans-Serif (Weights: 300 - 900) | Full Website Typography |
-
----
-
-## 📂 Project Structure
-
-```text
-sunlightgraphics_code_base/
-├── index.html          # Main HTML structure with semantic sections & modals
-├── styles.css          # Comprehensive CSS design system with CSS custom properties
-├── script.js           # Interactive modal triggers, dropzone, and carousel scripts
-├── README.md           # Documentation & Project Guide
-└── assets/             # Brand logos, hero graphics, and icons
-    ├── sunlight_graphics_logo.png
-    ├── exact_hero_folders.jpg
-    └── favicon.png
-```
 
 ---
 
