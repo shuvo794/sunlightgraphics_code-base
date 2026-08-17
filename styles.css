@@ -196,9 +196,11 @@ img {
   text-decoration: none;
 }
 
-.logo-icon-svg {
-  width: 48px;
-  height: 48px;
+.header-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .logo-text {
@@ -1587,6 +1589,13 @@ img {
   gap: 0.6rem;
   text-decoration: none;
   margin-bottom: 0.85rem;
+}
+
+.footer-logo-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-address {
