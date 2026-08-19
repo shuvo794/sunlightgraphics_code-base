@@ -347,29 +347,28 @@ img {
 }
 
 /* ==========================================================================
-   TRUST / BENEFIT BAR (EXACT REFERENCE DESIGN MATCH)
-   Solid Dark Navy Blue Bar positioned immediately below the main hero banner
+   TRUST / BENEFIT BAR (SOLID DARK NAVY BLUE BANNER STRIP WITH CMYK LINE)
    ========================================================================== */
 .trust-bar-section {
-  background-color: #FFFFFF;
-  color: #0F2B7B;
-  padding: 3rem 0;
-  border-top: 1px solid #EEF2F6;
-  border-bottom: 1px solid #EEF2F6;
+  background-color: #081942;
+  color: #FFFFFF;
+  padding: 1.75rem 0 0 0;
+  position: relative;
 }
 
 .trust-pillars-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   align-items: center;
+  padding-bottom: 1.75rem;
 }
 
 .trust-pillar-item {
   display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0.5rem;
   transition: transform 0.25s ease;
 }
 
@@ -378,13 +377,13 @@ img {
 }
 
 .pillar-icon-box {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0F2B7B;
+  color: #FFFFFF;
   transition: transform 0.3s ease;
 }
 
@@ -393,13 +392,8 @@ img {
 }
 
 .pillar-icon-svg {
-  width: 42px;
-  height: 42px;
-  stroke: #0F2B7B;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+  width: 40px;
+  height: 40px;
 }
 
 .pillar-content {
@@ -409,25 +403,39 @@ img {
 
 .pillar-heading {
   font-family: var(--font-poppins);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: #0F2B7B;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.3px;
   line-height: 1.25;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
 }
 
 .pillar-subtext {
   font-family: var(--font-poppins);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: var(--text-body);
-  line-height: 1.45;
+  color: #C2D0F0;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.cmyk-line-bar {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #00AEEF 0%, #00AEEF 25%,
+    #EC008C 25%, #EC008C 50%,
+    #FFF200 50%, #FFF200 75%,
+    #231F20 75%, #231F20 100%
+  );
 }
 
 /* ==========================================================================
-   TRUSTED BY SECTION (EXACT REFERENCE MATCH)
+   TRUSTED BY SECTION (EXACT REFERENCE MATCH WITH AUTO-SCROLLING LOGOS)
    ========================================================================== */
 .trusted-by-section {
   padding: 4rem 0 2rem 0;
@@ -445,36 +453,44 @@ img {
 }
 
 .trusted-logos-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
+  overflow: hidden;
+  width: 100%;
   margin-bottom: 2.5rem;
-  padding: 0 0.5rem;
+  padding: 0.75rem 0;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.arrow-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+.logos-marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+
+.marquee-track {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
+  justify-content: space-around;
+  gap: 4rem;
+  animation: logoScroll 22s linear infinite;
+  white-space: nowrap;
+  min-width: 200%;
+  flex-shrink: 0;
 }
 
-.arrow-btn:hover {
-  transform: scale(1.2);
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
-.logos-flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-grow: 1;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .brand-logo-clean {
