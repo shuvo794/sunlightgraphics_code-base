@@ -1171,15 +1171,19 @@ img {
 .reviews-carousel-wrapper {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.75rem;
   margin-bottom: 2.5rem;
   position: relative;
+  width: 100%;
 }
 
 .reviews-carousel-container {
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
   width: 100%;
+  flex: 1;
+  min-width: 0;
   border-radius: 16px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE & Edge */
@@ -1191,27 +1195,68 @@ img {
 
 .reviews-track {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: stretch;
+  width: 100%;
 }
 
 .reviews-track .review-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  min-width: calc(33.333% - 1rem);
+  flex: 0 0 calc(33.333% - 0.85rem);
+  min-width: calc(33.333% - 0.85rem);
   scroll-snap-align: start;
 }
 
 @media (max-width: 1024px) {
   .reviews-track .review-card {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: calc(50% - 0.75rem);
+    flex: 0 0 calc(50% - 0.65rem);
+    min-width: calc(50% - 0.65rem);
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .reviews-carousel-wrapper {
+    gap: 0.5rem;
+  }
+  .reviews-arrow-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
+  }
+  .reviews-arrow-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
   .reviews-track .review-card {
-    flex: 0 0 100%;
-    min-width: 100%;
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    height: 245px !important;
+    min-height: 245px !important;
+    padding: 1.1rem 1.1rem !important;
+    gap: 0.5rem !important;
+    justify-content: space-between !important;
+  }
+  .review-quote {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-height: calc(0.83rem * 1.4 * 3) !important;
+    line-height: 1.4 !important;
+    font-size: 0.83rem !important;
+  }
+  .reviews-summary-bar {
+    padding: 0.55rem 1rem !important;
+    gap: 0.4rem !important;
+    max-width: 100% !important;
+  }
+  .summary-score {
+    font-size: 1.05rem !important;
+  }
+  .summary-text {
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
   }
 }
 
