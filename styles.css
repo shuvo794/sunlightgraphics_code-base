@@ -454,12 +454,12 @@ img {
 }
 
 .trusted-by-title {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 12pt;
+  font-weight: 400;
   color: #4a5568;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
 }
 
 .trusted-logos-wrapper {
@@ -657,9 +657,9 @@ img {
 }
 
 .section-main-title {
-  font-size: 1.25rem;
+  font-size: 20pt;
   font-weight: 700;
-  color: #0f2b7b;
+  color: #0b205c;
   letter-spacing: -0.4px;
 }
 
@@ -774,9 +774,9 @@ img {
 
 .industries-main-title {
   font-family: var(--font-poppins);
-  font-size: 1.25rem;
+  font-size: 20pt;
   font-weight: 700;
-  color: #0f2b7b;
+  color: #0b205c;
   letter-spacing: -0.4px;
   margin-bottom: 1.75rem;
   text-align: center;
@@ -1555,9 +1555,9 @@ img {
 
 .process-main-title {
   font-family: var(--font-poppins);
-  font-size: 1.25rem;
+  font-size: 20pt;
   font-weight: 700;
-  color: #0f2b7b;
+  color: #0b205c;
   letter-spacing: -0.4px;
   margin-bottom: 2.5rem;
   text-align: center;
