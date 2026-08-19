@@ -506,6 +506,12 @@ img {
   transform: translateY(-2px);
 }
 
+.client-logo-svg {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
 /* Verizon Logo */
 .logo-verizon-text {
   font-size: 1.45rem;
@@ -1090,39 +1096,126 @@ img {
   text-align: center;
 }
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+/* 3-Card Carousel Track & Navigation Arrow Controls (< and >) */
+.reviews-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.reviews-carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  border-radius: 16px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+.reviews-carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.reviews-track {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.reviews-track .review-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: calc(33.333% - 1rem);
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1024px) {
+  .reviews-track .review-card {
+    flex: 0 0 calc(50% - 0.75rem);
+    min-width: calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-track .review-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+}
+
+/* Arrow Navigation Buttons (< and >) */
+.reviews-arrow-btn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0A1C4D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(10, 28, 77, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+}
+
+.reviews-arrow-btn:hover {
+  background: #0A1C4D;
+  color: #FFFFFF;
+  border-color: #0A1C4D;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(10, 28, 77, 0.2);
+}
+
+.reviews-arrow-btn:active {
+  transform: scale(0.95);
 }
 
 .review-card {
   background: #FFFFFF;
   border: 1px solid #EAEFF6;
-  border-radius: 16px;
-  padding: 2.25rem 2rem;
+  border-radius: 14px;
+  padding: 1.75rem 1.6rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(10, 28, 77, 0.03);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(10, 28, 77, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.review-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  opacity: 0.85;
 }
 
 .review-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: #CBD5E1;
-  box-shadow: 0 10px 25px rgba(10, 28, 77, 0.08);
+  box-shadow: 0 12px 30px rgba(10, 28, 77, 0.09);
 }
 
 .review-card-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
 }
 
 .google-logo-link {
   display: inline-flex;
+  align-items: center;
   transition: transform 0.2s ease;
 }
 
@@ -1131,8 +1224,8 @@ img {
 }
 
 .google-logo-svg {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
@@ -1140,39 +1233,46 @@ img {
   display: flex;
   gap: 0.2rem;
   color: #FFB800;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   line-height: 1;
 }
 
 .review-quote {
   font-family: var(--font-poppins);
-  font-size: 0.92rem;
-  color: var(--text-body);
-  line-height: 1.55;
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.6;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .review-author {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
+  border-top: 1px solid #F1F5F9;
+  margin-top: auto;
 }
 
 .author-name {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
   font-weight: 700;
-  color: #0F2B7B;
-  margin-bottom: 0.2rem;
+  color: #0A1C4D;
+  margin-bottom: 0.15rem;
 }
 
 .author-title {
   font-family: var(--font-poppins);
-  font-size: 0.82rem;
-  color: var(--text-body);
-  font-weight: 400;
-  opacity: 0.9;
+  font-size: 0.78rem;
+  color: #64748B;
+  font-weight: 500;
 }
 
 .reviews-bottom-actions {

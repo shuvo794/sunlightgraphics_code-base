@@ -113,6 +113,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Reviews 3-Card Carousel Controls (< and >)
+  const reviewsContainer = document.getElementById('reviewsCarouselContainer');
+  const reviewsPrevBtn = document.getElementById('reviewsPrevBtn');
+  const reviewsNextBtn = document.getElementById('reviewsNextBtn');
+
+  if (reviewsContainer && reviewsPrevBtn && reviewsNextBtn) {
+    reviewsPrevBtn.addEventListener('click', () => {
+      reviewsContainer.scrollBy({ left: -reviewsContainer.clientWidth, behavior: 'smooth' });
+    });
+    reviewsNextBtn.addEventListener('click', () => {
+      reviewsContainer.scrollBy({ left: reviewsContainer.clientWidth, behavior: 'smooth' });
+    });
+  }
+
   // Mobile Navigation Toggle
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const navMenu = document.querySelector('.nav-menu');
