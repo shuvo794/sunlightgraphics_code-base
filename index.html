@@ -2815,26 +2815,14 @@
             </div>
             <span class="summary-text">Based on 61 Google reviews</span>
           </a>
-
-          <!-- 
-          <a
-            href="https://g.page/r/CcsQTAiwEEXKEBE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-blue google-review-btn"
-          >
-            WRITE A GOOGLE REVIEW &rarr;
-          </a> 
-          -->
         </div>
       </div>
     </section>
 
-
-    <!-- CTA Section (EXACT SPEC MATCH) -->
+    <!-- CTA Section (EXACT SPEC MATCH - 100% FULL WIDTH EDGE-TO-EDGE) -->
     <section class="cta-section" id="cta-start">
       <div class="cta-container">
-        <!-- Left Content -->
+        <!-- Left Content (Aligned with Logo) -->
         <div class="cta-content">
           <h2>Ready to Get Started?</h2>
           <p>Let's bring your ideas to life with high-quality printing.</p>
@@ -2847,7 +2835,7 @@
           </a>
         </div>
 
-        <!-- Right City Skyline Overlay -->
+        <!-- Right City Skyline Image Overlay -->
         <div class="cta-skyline"></div>
       </div>
     </section>
@@ -2939,14 +2927,14 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="projectDetails"
-              >Project Details &amp; Quantity</label
+            <label class="form-label" for="projectDesc"
+              >Project Details *</label
             >
             <textarea
-              id="projectDetails"
+              id="projectDesc"
               class="form-textarea"
-              rows="3"
-              placeholder="Describe size, paper stock, quantity, turnaround date..."
+              placeholder="Tell us quantity, dimensions, materials, deadlines..."
+              required
             ></textarea>
           </div>
 
@@ -2971,51 +2959,48 @@
 
         <div class="dropzone" id="dropzone">
           <svg
-            width="48"
-            height="48"
+            class="dropzone-icon"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#223983"
-            stroke-width="2"
-            style="margin-bottom: 1rem"
+            stroke="currentColor"
+            stroke-width="1.8"
           >
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="17 8 12 3 7 8" />
             <line x1="12" y1="3" x2="12" y2="15" />
           </svg>
-          <p style="font-weight: 700; color: #223983; margin-bottom: 0.25rem">
-            Drop print files here or click to browse
+          <p class="dropzone-text">
+            Drop your files here or <span>Browse Files</span>
           </p>
-          <p style="font-size: 0.78rem; color: #64748b">
-            Supported files up to 250MB
-          </p>
-          <input type="file" id="fileInput" style="display: none" multiple />
+          <span class="dropzone-hint"
+            >Supports PDF, AI, EPS, PSD up to 100MB</span
+          >
+          <input type="file" id="fileInput" multiple hidden />
         </div>
       </div>
     </div>
 
-    <!-- Footer Section (EXACT MATCH TO REFERENCE SCREENSHOT) -->
-    <footer class="footer-section" id="footer">
+    <!-- FOOTER SECTION (EXACT MATCH TO REFERENCE DESIGN) -->
+    <footer class="site-footer">
       <div class="container footer-container">
-        <div class="footer-grid">
-          <!-- Column 1: Logo, Address & Socials -->
+        <div class="footer-top-grid">
+          <!-- Column 1: BRAND LOGO & ADDRESS & SOCIALS -->
           <div class="footer-col footer-brand-col">
-            <a href="#" class="footer-logo">
+            <a href="#" class="footer-logo-link">
               <img
                 src="assets/sunlight_graphics_logo.png"
                 alt="Sunlight Graphics Logo"
                 class="footer-logo-img"
               />
             </a>
-
-            <p class="footer-address">
+            <p class="footer-brand-address">
               2531 Alta Arden Expy<br />
               Sacramento, CA 95825
             </p>
-
-            <div class="footer-social-icons">
+            <span class="footer-social-label">Follow us on Social Media</span>
+            <div class="footer-social-row">
               <a
-                href="https://www.facebook.com/SunlightGraphics.fb"
+                href="https://www.facebook.com/SunlightGraphicsCA/"
                 class="social-circle-btn"
                 aria-label="Facebook"
               >
@@ -3026,12 +3011,12 @@
                   fill="currentColor"
                 >
                   <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"
                   />
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/sunlight.graphics/"
+                href="https://www.instagram.com/sunlightgraphics/"
                 class="social-circle-btn"
                 aria-label="Instagram"
               >
@@ -3039,11 +3024,15 @@
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                   />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </a>
               <a
@@ -3119,27 +3108,12 @@
           <div class="footer-col footer-contact-col">
             <h4 class="footer-heading">CONTACT US</h4>
             <ul class="footer-contact-list">
+              <!-- 1. Phone -->
               <li>
                 <div class="contact-icon-circle">
                   <svg
-                    width="13"
-                    height="13"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.2"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <span>2531 Alta Arden Expy, Sacramento, CA 95825</span>
-              </li>
-              <li>
-                <div class="contact-icon-circle">
-                  <svg
-                    width="13"
-                    height="13"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -3152,11 +3126,13 @@
                 </div>
                 <a href="tel:9169681378">916.968.1378</a>
               </li>
+
+              <!-- 2. Email -->
               <li>
                 <div class="contact-icon-circle">
                   <svg
-                    width="13"
-                    height="13"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -3172,11 +3148,31 @@
                   >orders@sunlightgraphics.com</a
                 >
               </li>
+
+              <!-- 3. Address -->
               <li>
                 <div class="contact-icon-circle">
                   <svg
-                    width="13"
-                    height="13"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <span>2531 Alta Arden Expy, Sacramento, CA 95825</span>
+              </li>
+
+              <!-- 4. Store Hours -->
+              <li>
+                <div class="contact-icon-circle">
+                  <svg
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
