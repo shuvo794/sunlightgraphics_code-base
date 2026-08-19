@@ -438,25 +438,25 @@ img {
    TRUSTED BY SECTION (EXACT REFERENCE MATCH WITH AUTO-SCROLLING LOGOS)
    ========================================================================== */
 .trusted-by-section {
-  padding: 4rem 0 2rem 0;
+  padding: 2.5rem 0 1rem 0;
   background-color: #FFFFFF;
   text-align: center;
 }
 
 .trusted-by-title {
-  font-size: 1.55rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  color: #0A1C4D;
-  line-height: 1.35;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.3px;
+  color: #4A5568;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.2px;
 }
 
 .trusted-logos-wrapper {
   overflow: hidden;
   width: 100%;
-  margin-bottom: 2.5rem;
-  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
   position: relative;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -507,9 +507,12 @@ img {
 }
 
 .client-logo-svg {
-  height: 44px;
+  height: 38px;
   width: auto;
+  max-width: 200px;
   display: block;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* Verizon Logo */
@@ -632,7 +635,7 @@ img {
 }
 
 .section-main-title {
-  font-size: 2.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
@@ -732,7 +735,7 @@ img {
    INDUSTRIES WE SERVE SECTION (EXACT MATCH TO REFERENCE DESIGN)
    ========================================================================== */
 .industries-section {
-  padding: var(--section-padding, 4rem 0);
+  padding: 2.5rem 0 1rem 0;
   background-color: #FFFFFF;
 }
 
@@ -749,11 +752,11 @@ img {
 
 .industries-main-title {
   font-family: var(--font-poppins);
-  font-size: 2.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
   text-align: center;
 }
 
@@ -762,11 +765,48 @@ img {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+}
+
+.industries-arrow-btn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0A1C4D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(10, 28, 77, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.industries-arrow-btn svg {
+  stroke: #0A1C4D;
+  width: 24px;
+  height: 24px;
+}
+
+.industries-arrow-btn:hover {
+  background: #0A1C4D;
+  color: #FFFFFF;
+  border-color: #0A1C4D;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(10, 28, 77, 0.2);
+}
+
+.industries-arrow-btn:hover svg {
+  stroke: #FFFFFF;
 }
 
 .industries-carousel-track {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(200px, 1fr));
+  display: flex;
   gap: 1.25rem;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -774,6 +814,8 @@ img {
   padding: 0.5rem 0.25rem 1rem 0.25rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  flex: 1;
+  min-width: 0;
 }
 
 .industries-carousel-track::-webkit-scrollbar {
@@ -792,6 +834,8 @@ img {
   transition: all 0.25s ease;
   scroll-snap-align: start;
   min-height: 290px;
+  min-width: 220px;
+  flex: 0 0 220px;
   box-shadow: 0 4px 15px rgba(10, 28, 77, 0.03);
 }
 
@@ -839,32 +883,7 @@ img {
   font-weight: 400;
 }
 
-.industries-arrow-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-  z-index: 5;
-  color: #475569;
-}
 
-.industries-arrow-btn svg {
-  stroke: #475569;
-}
-
-.industries-arrow-btn:hover {
-  transform: scale(1.25);
-  color: #0F2B7B;
-}
-
-.industries-arrow-btn:hover svg {
-  stroke: #0F2B7B;
-}
 
 /* ==========================================================================
    LET'S GET PRINTING FEATURE BANNER (EXACT MATCH TO REFERENCE DESIGN)
@@ -1034,6 +1053,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2.5px solid #E31B23;
+  border-radius: 6px;
+  background: #FFFFFF;
+  padding: 4px;
 }
 
 .partner-feature-svg {
@@ -1442,17 +1465,6 @@ img {
 }
 
 .process-tagline {
-  font-size: 0.88rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #E31B23;
-  margin-bottom: 0.5rem;
-  display: block;
-  text-align: center;
-}
-
-.process-tagline {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
   font-weight: 700;
@@ -1461,11 +1473,12 @@ img {
   text-transform: uppercase;
   margin-bottom: 0.35rem;
   display: block;
+  text-align: center;
 }
 
 .process-main-title {
   font-family: var(--font-poppins);
-  font-size: 2.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
@@ -2312,8 +2325,8 @@ img {
 
 .location-main-title {
   font-family: var(--font-poppins);
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #0A1C4D;
   margin-bottom: 0.75rem;
 }
