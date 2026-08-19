@@ -34,6 +34,7 @@
   --text-body: #4A5568;
   --text-muted: #64748B;
   --text-light: #C2D0F0;
+  --section-padding: 4rem 0;
   
   --border-light: #E2E8F0;
   
@@ -273,7 +274,7 @@ img {
    ========================================================================== */
 .hero-section {
   background: linear-gradient(135deg, #F8FAFD 0%, #FFFFFF 50%, #F0F4FC 100%);
-  padding: 4.5rem 0 5rem 0;
+  padding: var(--section-padding, 4rem 0);
   position: relative;
   overflow: hidden;
 }
@@ -291,11 +292,11 @@ img {
 
 .hero-title {
   font-size: 3.25rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.12;
   color: var(--navy-dark);
   margin-bottom: 1.5rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 }
 
 .hero-title .title-blue {
@@ -352,7 +353,7 @@ img {
 .trust-bar-section {
   background-color: #FFFFFF;
   color: #0F2B7B;
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   border-top: 1px solid #EEF2F6;
   border-bottom: 1px solid #EEF2F6;
 }
@@ -409,10 +410,10 @@ img {
 .pillar-heading {
   font-family: var(--font-poppins);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   line-height: 1.25;
   margin-bottom: 0.35rem;
 }
@@ -420,8 +421,8 @@ img {
 .pillar-subtext {
   font-family: var(--font-poppins);
   font-size: 0.84rem;
-  font-weight: 500;
-  color: #0F2B7B;
+  font-weight: 400;
+  color: var(--text-body);
   line-height: 1.45;
 }
 
@@ -429,14 +430,14 @@ img {
    TRUSTED BY SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .trusted-by-section {
-  padding: 3.5rem 0 2rem 0;
+  padding: 4rem 0 2rem 0;
   background-color: #FFFFFF;
   text-align: center;
 }
 
 .trusted-by-title {
   font-size: 1.55rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0A1C4D;
   line-height: 1.35;
   margin-bottom: 2.5rem;
@@ -589,18 +590,18 @@ img {
    SERVICES GRID SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .services-section {
-  padding: 4.5rem 0 5rem 0;
+  padding: var(--section-padding, 4rem 0);
   background-color: #FFFFFF;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-tagline {
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #E31B23;
@@ -610,7 +611,7 @@ img {
 
 .section-main-title {
   font-size: 2.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
 }
@@ -659,7 +660,7 @@ img {
 
 .service-title {
   font-size: 1.02rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
@@ -669,12 +670,12 @@ img {
 
 .service-description {
   font-size: 0.85rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   margin-bottom: 1.25rem;
   line-height: 1.45;
   flex-grow: 1;
   max-width: 240px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .service-link {
@@ -709,24 +710,14 @@ img {
    INDUSTRIES WE SERVE SECTION (EXACT MATCH TO REFERENCE DESIGN)
    ========================================================================== */
 .industries-section {
-  padding: 4.5rem 0 5rem 0;
+  padding: var(--section-padding, 4rem 0);
   background-color: #FFFFFF;
-}
-
-.industries-tagline {
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #E31B23;
-  margin-bottom: 0.5rem;
-  display: block;
 }
 
 .industries-tagline {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #E31B23;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -737,10 +728,10 @@ img {
 .industries-main-title {
   font-family: var(--font-poppins);
   font-size: 2.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -753,7 +744,7 @@ img {
 
 .industries-carousel-track {
   display: grid;
-  grid-template-columns: repeat(6, minmax(200px, 1fr));
+  grid-template-columns: repeat(10, minmax(200px, 1fr));
   gap: 1.25rem;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -810,7 +801,7 @@ img {
 .industry-title {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -821,9 +812,9 @@ img {
 .industry-description {
   font-family: var(--font-poppins);
   font-size: 0.82rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .industries-arrow-btn {
@@ -837,10 +828,20 @@ img {
   flex-shrink: 0;
   transition: transform 0.2s ease;
   z-index: 5;
+  color: #475569;
+}
+
+.industries-arrow-btn svg {
+  stroke: #475569;
 }
 
 .industries-arrow-btn:hover {
   transform: scale(1.25);
+  color: #0F2B7B;
+}
+
+.industries-arrow-btn:hover svg {
+  stroke: #0F2B7B;
 }
 
 /* ==========================================================================
@@ -882,10 +883,10 @@ img {
 .feature-main-title {
   font-family: var(--font-poppins);
   font-size: 3.1rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   line-height: 1.05;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.5px;
   margin-bottom: 0.75rem;
 }
 
@@ -912,16 +913,16 @@ img {
 .feature-text-content p {
   font-family: var(--font-poppins);
   font-size: 0.96rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.7;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ==========================================================================
    TRUSTED PRINTING PARTNER SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .trusted-partner-section {
-  padding: 4.5rem 0;
+  padding: var(--section-padding, 4rem 0);
   background-color: #FFFFFF;
 }
 
@@ -947,11 +948,26 @@ img {
 .partner-navy-title {
   font-family: var(--font-poppins);
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #FFFFFF;
   line-height: 1.2;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
   margin-bottom: 1.25rem;
+}
+
+.partner-accent-wrapper {
+  position: relative;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.partner-accent-underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 10px;
+  pointer-events: none;
 }
 
 .partner-navy-title .red-mark {
@@ -1001,13 +1017,12 @@ img {
 .partner-feature-svg {
   width: 44px;
   height: 44px;
-  stroke: #0F2B7B;
 }
 
 .partner-feature-title {
   font-family: var(--font-poppins);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1018,9 +1033,9 @@ img {
 .partner-feature-desc {
   font-family: var(--font-poppins);
   font-size: 0.85rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.45;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (max-width: 992px) {
@@ -1044,13 +1059,13 @@ img {
    GOOGLE REVIEWS & TESTIMONIALS SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .reviews-section {
-  padding: 4.5rem 0;
+  padding: var(--section-padding, 4rem 0);
   background-color: #FFFFFF;
 }
 
 .reviews-tagline {
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #E31B23;
@@ -1090,6 +1105,15 @@ img {
   margin-bottom: 1.25rem;
 }
 
+.google-logo-link {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.google-logo-link:hover {
+  transform: scale(1.1);
+}
+
 .google-logo-svg {
   width: 28px;
   height: 28px;
@@ -1107,9 +1131,9 @@ img {
 .review-quote {
   font-family: var(--font-poppins);
   font-size: 0.92rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.55;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -1122,7 +1146,7 @@ img {
 .author-name {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   margin-bottom: 0.2rem;
 }
@@ -1130,23 +1154,44 @@ img {
 .author-title {
   font-family: var(--font-poppins);
   font-size: 0.82rem;
-  color: #0F2B7B;
-  font-weight: 500;
+  color: var(--text-body);
+  font-weight: 400;
   opacity: 0.9;
 }
 
-.reviews-summary-bar {
+.reviews-bottom-actions {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.reviews-summary-bar {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  margin-top: 2rem;
+  gap: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  background: #F8FAFD;
+  border: 1px solid #EAEFF6;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.reviews-summary-bar:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 15px rgba(10, 28, 77, 0.08);
+  transform: translateY(-2px);
 }
 
 .summary-score {
   font-family: var(--font-poppins);
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
 }
 
@@ -1161,7 +1206,7 @@ img {
 .summary-text {
   font-family: var(--font-poppins);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0F2B7B;
 }
 
@@ -1175,7 +1220,7 @@ img {
    OUR PROCESS SECTION (EXACT REFERENCE MATCH)
    ========================================================================== */
 .process-section {
-  padding: 4.5rem 0 5rem 0;
+  padding: var(--section-padding, 4rem 0);
   background-color: #FFFFFF;
   border-top: 1px solid #EEF2F6;
   border-bottom: 1px solid #EEF2F6;
@@ -1183,7 +1228,7 @@ img {
 
 .process-tagline {
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #E31B23;
@@ -1195,7 +1240,7 @@ img {
 .process-tagline {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #E31B23;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -1206,10 +1251,10 @@ img {
 .process-main-title {
   font-family: var(--font-poppins);
   font-size: 2.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   letter-spacing: -0.4px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -1256,7 +1301,7 @@ img {
   background-color: #E31B23;
   color: #FFFFFF;
   font-family: var(--font-poppins);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.85rem;
   border-radius: 50%;
   display: flex;
@@ -1270,7 +1315,7 @@ img {
 .step-title {
   font-family: var(--font-poppins);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   margin-bottom: 0.6rem;
   line-height: 1.3;
@@ -1279,9 +1324,9 @@ img {
 .step-description {
   font-family: var(--font-poppins);
   font-size: 0.85rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .process-connector {
@@ -1397,12 +1442,12 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 30%;
+  width: 35%;
   height: 100%;
-  background-image: url('assets/sacramento_skyline_footer_bg.png');
+  background-image: url('assets/sacramento_bridge_skyline.png');
   background-repeat: no-repeat;
   background-position: right bottom;
-  background-size: cover;
+  background-size: contain;
   pointer-events: none;
   z-index: 1;
 }
@@ -1685,9 +1730,9 @@ img {
 .footer-address {
   font-family: var(--font-poppins);
   font-size: 0.85rem;
-  color: #0F2B7B;
+  color: var(--text-body);
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1.25rem;
 }
 
@@ -1718,7 +1763,7 @@ img {
 .footer-heading {
   font-family: var(--font-poppins);
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0F2B7B;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -1738,8 +1783,8 @@ img {
 .footer-menu a {
   font-family: var(--font-poppins);
   font-size: 0.85rem;
-  font-weight: 500;
-  color: #0F2B7B;
+  font-weight: 400;
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
@@ -1762,8 +1807,8 @@ img {
   margin-bottom: 0.75rem;
   font-family: var(--font-poppins);
   font-size: 0.84rem;
-  font-weight: 500;
-  color: #0F2B7B;
+  font-weight: 400;
+  color: var(--text-body);
 }
 
 .contact-icon-circle {
@@ -1779,7 +1824,7 @@ img {
 }
 
 .footer-contact-list a {
-  color: #0F2B7B;
+  color: var(--text-body);
   text-decoration: none;
 }
 
