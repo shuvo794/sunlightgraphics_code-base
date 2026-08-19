@@ -15,7 +15,7 @@
   --light-border: #eaeff6;
   --light-blue-bg: #f8fafd;
   --white: #ffffff;
-  --container-width: 1200px;
+  --container-width: 1280px;
 
   /* Brand Palette Variables */
   --navy-dark: #0b205c;
@@ -1676,7 +1676,7 @@ img {
 .cta-container {
   position: relative;
   width: 100%;
-  max-width: var(--container-width, 1200px);
+  max-width: 1280px;
   height: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
