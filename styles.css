@@ -2145,7 +2145,7 @@ img {
 
 .footer-contact-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.85rem;
   font-family: var(--font-poppins);
@@ -2157,34 +2157,40 @@ img {
 
 .contact-icon-circle,
 .contact-icon-box {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  background: transparent !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background-color: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 50% !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 1px;
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(11, 32, 92, 0.06) !important;
+  transition: all 0.25s ease;
 }
 
 .contact-icon-circle svg,
 .contact-icon-box svg {
-  width: 18px;
-  height: 18px;
-  stroke: #0b205c;
+  width: 14px;
+  height: 14px;
+  stroke: #0b205c !important;
   fill: none;
-  stroke-width: 2;
-  transition: stroke 0.2s ease, transform 0.2s ease;
+  stroke-width: 2.2;
+  transition: all 0.2s ease;
+}
+
+.footer-contact-list li:hover .contact-icon-circle,
+.footer-contact-list li:hover .contact-icon-box {
+  border-color: #e31b23 !important;
+  box-shadow: 0 2px 8px rgba(227, 27, 35, 0.2) !important;
+  transform: translateY(-2px);
 }
 
 .footer-contact-list li:hover .contact-icon-circle svg,
 .footer-contact-list li:hover .contact-icon-box svg {
-  stroke: #e31b23;
-  transform: scale(1.12);
+  stroke: #e31b23 !important;
 }
 
 .footer-contact-list a {
